@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/ImagePage.dart';
+import 'package:flutter_app/ListTitlePage.dart';
 import 'package:flutter_app/RowAndColumnPage.dart';
 import 'package:flutter_app/TextPage.dart';
 
@@ -40,6 +41,7 @@ class MyHomePage extends StatelessWidget {
     _suggestions.add("Text组件");
     _suggestions.add("Image组件");
     _suggestions.add("Row&Column组件");
+    _suggestions.add("ListTitle组件");
 
     return new Scaffold(
       // 代码从这里...
@@ -98,6 +100,11 @@ class MyHomePage extends StatelessWidget {
       case "Row&Column组件":
         Navigator.push(context, new MaterialPageRoute(builder: (context) {
           return new RowAndColumnPage();
+        }));
+        break;
+      case "ListTitle组件":
+        Navigator.push(context, new MaterialPageRoute(builder: (context) {
+          return new ListTitlePage();
         }));
         break;
     }
