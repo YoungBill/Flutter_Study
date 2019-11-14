@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ImagePage.dart';
 import 'package:flutter_app/TextPage.dart';
 
 void main() => runApp(MyApp());
@@ -36,6 +37,7 @@ class MyHomePage extends StatelessWidget {
     //return new Text(wordPair.asPascalCase); // ... 这两行
 
     _suggestions.add("Text组件");
+    _suggestions.add("Image组件");
 
     return new Scaffold(
       // 代码从这里...
@@ -84,6 +86,11 @@ class MyHomePage extends StatelessWidget {
       case "Text组件":
         Navigator.push(context, new MaterialPageRoute(builder: (context) {
           return new TextPage();
+        }));
+        break;
+      case "Image组件":
+        Navigator.push(context, new MaterialPageRoute(builder: (context) {
+          return new ImagePage();
         }));
         break;
     }
